@@ -1,19 +1,29 @@
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
 import NavBar from './components/NavBar'
-import About from './components/About'
-import Projects from './components/Projects'
-import Footer from './components/Footer'
-import ContactInfo from './components/ContactInfo'
+import Landing from './components/Landing'
+import CV from './components/CV'
+import Academic from './components/Academic'
+import Personal from './components/Personal'
+
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
+        
         <NavBar />
-        <h1> Hi, I'm Nathalie Maria </h1>
-        <About />
-        <Projects />
-        <Footer />
-        <ContactInfo />
-    </>
+        <Routes>
+          <Route path='/home' element={<Landing />} />
+          <Route path='/cv' element={<CV />} />
+          <Route path='/academicachivementsandpublications' element={<Academic/>}></Route>
+          <Route path='/poetryandstuffIlike' element={<Personal />}></Route>
+
+        </Routes>
+  
+        
+
+    </BrowserRouter>
 
   )
 }
