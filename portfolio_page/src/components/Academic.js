@@ -9,6 +9,7 @@ export default function Academic(){
         <AcademicSection 
           title= {"The Effect of Message Sentiment on the Virality of Twitter Messages"}
           description={"Bachelors Thesis in Psychology"}
+          pdf= {'../assets/NathalieMariaKirch_Psychology_BachelorThesis[2521703].pdf'}
         />
         <AcademicSection 
           title= {"Psychology and Phenomenology of Religious Experiences - Investigations Into Religious Experiences and Arguments Against Epistemological Reductionism"}

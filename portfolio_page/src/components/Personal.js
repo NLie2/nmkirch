@@ -42,16 +42,16 @@ export default function Personal(){
         
         <Poetry 
           titlesAndLinks= { [ 
-            {title: "Wear Sunscreen by Mary Schmich", link: ""},
+            {title: "Wear Sunscreen by Mary Schmich", link: "https://www.chicagotribune.com/columns/chi-schmich-sunscreen-column-column.html"},
             {title: "For M by Mikko Harvey", link: "https://www.foundryjournal.com/harvey.html"}
           ]}
         />
 
         <h2> Books that changed me </h2>
         <ul>
-          <li> <Link to="">I am a Strange Loup by Douglas Hofstadter</Link></li>
+          <li> <Link to="https://www.goodreads.com/en/book/show/123471">I am a Strange Loup by Douglas Hofstadter</Link></li>
           <li> <Link to="https://www.goodreads.com/book/show/10225972-briefe-an-einen-jungen-dichter"> Letters to a Young Poet by Rainer Maria Rilke</Link></li>
-          <li> <Link to=""> The Myth of Sysiphus by Albert Camus </Link></li>
+          <li> <Link to="https://www.goodreads.com/book/show/91950.The_Myth_of_Sisyphus"> The Myth of Sysiphus by Albert Camus </Link></li>
         </ul>
 
         <h2> Podcasts I enjoy listening to </h2>

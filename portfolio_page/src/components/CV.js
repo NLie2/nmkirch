@@ -11,7 +11,7 @@ export default function CV(){
           "2018 - 2021":  "BA in Philosophy of Psychology",
           "2017 - 2020":  "Bsc in Psychology"
         }}
-        reverse = {false}
+
       />
       <CVSection 
         heading = {"Work Experience"}
@@ -21,7 +21,7 @@ export default function CV(){
           "October 2023 - present":  "Teaching Assistant General Assembly Software Engineering Immersive Bootcamp",
           "September 2023 - present":  "Research Intern, Institute for Artificial Intelligance and Medical Decision Support, Medical University of Vienna"
         }}
-        reverse = {true}
+        reverse = {false}
       />
       <CVSection 
         heading = {"Extracurricular Activities and Voluntary Work"}
@@ -30,7 +30,7 @@ export default function CV(){
           "September 2020 - September 2021": "Editor in Chief, Erasmus Student Journal of Philosophy", 
           "March 2022 - July 2023":  "Co-founder and boardmember, Effective Altruism Utrecht"
         }}
-        reverse = {true}
+        reverse = {false}
       />
     </div>
   )
