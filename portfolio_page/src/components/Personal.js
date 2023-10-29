@@ -5,20 +5,41 @@ import Poetry from './Poetry'
 
 export default function Personal(){
   return(
-    <div className="personal"> 
+    <div className="personal middle"> 
         <h1> Poetry and Stuff I like </h1>
 
         <h2> Poetry </h2>
         <h3> ... I wrote </h3>
         <Poetry 
           titlesAndLinks= { [ 
-            {title: "soap bubble vacuum cleaner", link: ""}, 
+            {title: "soap bubble vacuum cleaner", poem: `
+            Raven, raven by the pond<br>
+            Come to sit where I belong<br>
+            Call me princess, guard your queen<br>
+            Visit me by the window seem<br><br>
+            
+            Tell me tales of other ravens<br>
+            And how you've seen and roamed the heavens<br>
+            Tell me I could climb a tree<br>
+            Fairytales that tell of me<br><br>
+            
+            Lead me to a closed off garden<br>
+            Hide me in your feathered garments<br>
+            Let me tell you of a time<br>
+            When my red hair wasn't mine!<br><br>
+            
+            Raven raven i can't see you<br>
+            Im a mute swan you're an eagle<br>
+            Like to hunt for my own fish<br>
+            But you may dream my secret wish<br>
+            `}, 
             {title: "wealthy raven", link: ""}, 
             {title: "family vacation", link: ""}, 
             {title: "de munt", link: ""}
           ]}
         />
         <h3> ... I would read if I were you </h3>
+        
         <Poetry 
           titlesAndLinks= { [ 
             {title: "Wear Sunscreen by Mary Schmich", link: ""},

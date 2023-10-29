@@ -1,7 +1,32 @@
-body{
-  
-}
 
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Source+Code+Pro:wght@300;400&display=swap');
+
+#root{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  font-family: 'Source Code Pro', monospace;
+  // font-family: 'Lato', sans-serif;
+}
 img {
   width: 250px;
 }
+
+.middle {
+  flex-grow: 4;
+}
+footer{
+  margin-top: 2rem;
+  align-self: center;
+}
+
+@import './components/Nav.scss';
+@import './components/Landing.scss';
+@import './components/Projects.scss';
+@import './components/ContactInfo.scss';
+@import './components/About.scss';
+
+

@@ -2,7 +2,7 @@ import CVSection from './CV_section'
 
 export default function CV(){
   return(
-    <div className="CV"> 
+    <div className="CV middle"> 
       <CVSection 
         heading={"Education"}
         Timeline = {{

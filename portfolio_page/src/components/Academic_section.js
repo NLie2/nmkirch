@@ -4,6 +4,7 @@ export default function AcademicSection( { heading, title, link, pdf, descriptio
       <h2> {heading} </h2>
       <h3> {title} </h3>
       <p> {description} </p>
+      {link && <a href={link}> Access </a> }
     </div>
   )
 }
