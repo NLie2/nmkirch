@@ -54,13 +54,13 @@ export default function Personal(){
 
             A good place to hide would be
             behind a wall of glass 
-            where I’d think I would 
+            where I'd think I was
             observe you through a one-way mirror
 
             Mind that cats only fall asleep 
             when you least expect it 
             and that it takes a while for wolves to howl 
-            when they aren’t lonely 
+            when they aren't lonely 
 
             Lifeguards secretly dream of drowning corpses 
             and your lovely face will be even prettier tomorrow 
