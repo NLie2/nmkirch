@@ -146,7 +146,6 @@ export default function Personal(){
         <ul>
           <li> <Link to=""> Hardcore History by Dan Carlin</Link></li>
           <li> <Link to=""> Making Sense by Sam Harris </Link></li>
-          <li> <Link to=""> The Myth of Sysiphus by Albert Camus </Link></li>
         </ul>
 
         <h2> Artists I like  </h2>

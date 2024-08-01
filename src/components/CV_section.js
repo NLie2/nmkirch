@@ -1,21 +1,38 @@
-export default function CVSection( { heading, Timeline, reverse }){
+import React, { useState } from 'react';
 
-  const dates = Object.keys(Timeline).reverse()
-  const titles = Object.values(Timeline)
-  console.log(reverse, dates)
-  return(
-    <div className= "CV-section">
-      <h1> {heading} </h1>
-      {reverse === true ? Object.keys(Timeline).map((key) => {
-        return <h3 key={key}>{key} | {Timeline[key]}</h3>
-        }) : 
-      Object.keys(Timeline).reverse().map((key) => {
-        console.log(key)
-        return <h3 key={key}>{key} | {Timeline[key]}</h3>
-        })
-      }
+export default function CVSection({ heading, Timeline, information, reverse, toggleExpand = false }) {
+  const entries = reverse ? Object.entries(Timeline).reverse() : Object.entries(Timeline);
+  const initialExpanded = entries.reduce((acc, [date], index) => {
+    acc[date] = toggleExpand && index === 0;
+    return acc;
+  }, {});
+  const [expanded, setExpanded] = useState(initialExpanded);
 
+  const toggleExpandHandler = (date) => {
+    setExpanded((prev) => ({
+      ...prev,
+      [date]: !prev[date],
+    }));
+  };
+
+  return (
+    <div className="CV_section">
+      <h1>{heading}</h1>
+      {entries.map(([date, details]) => (
+        <div key={date} className="timeline-entry">
+          <h3 onClick={() => toggleExpandHandler(date)} style={{ cursor: 'pointer' }}>
+            {date} : <strong>{details.title}</strong> <span>{expanded[date] ? '▼' : '▶'}</span>
+          </h3>
+          {expanded[date] && (
+            <ul>
+              {details.points.map((point, index) => (
+                <li key={index}>{point}</li>
+              ))}
+            </ul>
+          )}
+        </div>
+      ))}
+      {information && <p>{information}</p>}
     </div>
-  )
-
+  );
 }
