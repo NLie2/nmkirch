@@ -1,0 +1,28 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Creates two equal-width columns */
+  grid-template-rows: repeat(2, auto); /* Creates two rows with height based on content */
+  gap: 2rem; /* Space between grid items */
+  width: 100%; /* Ensures the grid takes the full width of its container */
+  margin-top: 2rem; /* Adds space between the header and the grid */
+}
+
+.grid-item {
+  background-color: #f9f9f9; /* Optional: background color for grid items */
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for grid items */
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem; /* Space between the main title and the grid */
+}
+
+ul {
+  padding-left: 1rem;
+}
+
+ul li {
+  margin-bottom: 0.5rem; /* Space between list items */
+}

@@ -1,8 +1,48 @@
-.projects{
-  display:grid;
+.projects {
+  display: grid;
   grid-template-columns: repeat(2, 1fr); 
-  grid-gap: 0.5rem; 
+  gap: 3rem; /* Increased gap between the columns */
   width: 80vw;
-  padding: 2rem;
-  border-style: solid;
+}
+
+
+.project-box{
+  //border-style: solid;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 1rem;
+  background-color: #f9f9f9; /* Optional: background color for grid items */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for grid items */
+
+}
+
+.project-list {
+  max-height: 200px; /* Height when collapsed */
+  overflow-y: auto; /* Always scrollable */
+  transition: max-height 0.3s ease-in-out;
+}
+
+.project-list.expanded {
+  max-height: 500px; /* Adjust to a larger value or set to none */
+  overflow-y: auto; /* Allows scrolling if content exceeds this height */
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end; /* Aligns the button to the right */
+  margin-top: 10px;
+}
+
+button {
+  margin-top: 10px;
+  cursor: pointer;
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #005f99;
 }

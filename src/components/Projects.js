@@ -1,25 +1,63 @@
-import Project from './Project'
+import React, { useState } from 'react';
+import Project from './Project';
+import { currentProjects, previousProjects } from '../assets/projectData';
 
-export default function Projects( ){
+export default function Projects() {
+  const [isPreviousExpanded, setIsPreviousExpanded] = useState(false);
+  const [isCurrentExpanded, setIsCurrentExpanded] = useState(false);
+  const maxVisibleProjects = 3; // Number of projects to show when not expanded
 
-  const projects = [ 
-    { title:"Tetris game", deployment_link: "https://nlie2.github.io/Tetris/", description: "A solo project in which I built a game in plain JavaScript, deployed with Netlify."}, 
-    { title:"Can I wear short pants today", deployment_link: "https://caniwearshortpants.netlify.app/", description: "A web application making use of a weather API, which tells user whether it is warm enough to wear short pants. It was a pair project and I focused mostly on the react components and API calls for this project."}, 
-    { title:"Stock Portfolio Analyzer", deployment_link: "https://stock-portfolio-analyzer-cc275ea5067c.herokuapp.com/", description: "A Full-Stack Web application that allows users to determine the Networth progression of their stock portfolio. The backend is written in Python/Django and the frontend in react"}, 
-    { title:"SEI quizz app", deployment_link: "https://quizzapp-88d607683c8a.herokuapp.com/", description: "A web application using express and react, allowing students to share knowledge of a common course. I mostly worked on connecting front- and backend, and creating the API for this project."}, 
-]
+  const handlePreviousExpandClick = () => {
+    setIsPreviousExpanded(!isPreviousExpanded);
+  };
 
-  return(
+  const handleCurrentExpandClick = () => {
+    setIsCurrentExpanded(!isCurrentExpanded);
+  };
+
+  return (
     <div className="projects">
-      {
-        projects.map( project => {
-          return <Project 
-            projectName = {project.title}
-            deploymentLink = {project.deployment_link}
-            description = {project.description}
-          />
-        })
-      }
+
+      {/* Previous Projects Section */}
+      <section id="previous-projects">
+        <h2>SWE side projects</h2>
+        <div className={`project-list ${isPreviousExpanded ? 'expanded' : 'collapsed'}`}>
+          {previousProjects.slice(0, isPreviousExpanded ? previousProjects.length : maxVisibleProjects).map((project, index) => (
+            <Project 
+              key={index}
+              projectName={project.title}
+              deploymentLink={project.deployment_link}
+              description={project.description}
+            />
+          ))}
+        </div>
+        <div className="button-container">
+        <button onClick={handlePreviousExpandClick}>
+          {isPreviousExpanded ? 'Show Less' : 'Show More'}
+        </button>
+        </div>
+      </section>
+
+      {/* Current Projects Section */}
+      <section id="current-projects">
+        <h2>Research</h2>
+        <div className={`project-list ${isCurrentExpanded ? 'expanded' : 'collapsed'}`}>
+          {currentProjects.slice(0, isCurrentExpanded ? currentProjects.length : maxVisibleProjects).map((project, index) => (
+            <Project 
+              key={index}
+              projectName={project.title}
+              authors={project.authors}
+              deploymentLink={project.deployment_link}
+              description={project.description}
+            />
+          ))}
+        </div>
+        <div className="button-container">
+        <button onClick={handleCurrentExpandClick}>
+          {isCurrentExpanded ? 'Show Less' : 'Show More'}
+        </button>
+        </div>
+      </section>
     </div>
-  )
+  );
 }
